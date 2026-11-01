@@ -1,0 +1,44 @@
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/root"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<View
+		android:id="@+id/deco_top"
+		android:layout_width="260dp"
+		android:layout_height="260dp" />
+	<View
+		android:id="@+id/deco_bottom"
+		android:layout_width="320dp"
+		android:layout_height="320dp" />
+	<LinearLayout
+		android:id="@+id/center_box"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center_horizontal|center_vertical"
+		android:orientation="vertical">
+		<LinearLayout
+			android:id="@+id/logo_tile"
+			android:layout_width="112dp"
+			android:layout_height="112dp"
+			android:gravity="center_horizontal|center_vertical"
+			android:orientation="vertical">
+			<TextView
+				android:id="@+id/logo_letter"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="12sp" />
+		</LinearLayout>
+		<TextView
+			android:id="@+id/app_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="12sp" />
+		<View
+			android:id="@+id/name_bar"
+			android:layout_width="44dp"
+			android:layout_height="5dp" />
+	</LinearLayout>
+</FrameLayout>

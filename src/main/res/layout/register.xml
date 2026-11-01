@@ -1,0 +1,76 @@
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/root_scroll"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fillViewport="true"
+	android:scrollbars="none">
+	<LinearLayout
+		android:id="@+id/content"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<LinearLayout
+			android:id="@+id/header"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:orientation="vertical">
+			<LinearLayout
+				android:id="@+id/logo_tile"
+				android:layout_width="76dp"
+				android:layout_height="76dp"
+				android:gravity="center_horizontal|center_vertical"
+				android:orientation="vertical">
+				<TextView
+					android:id="@+id/logo_letter"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="12sp" />
+			</LinearLayout>
+			<TextView
+				android:id="@+id/title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="12sp" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/card"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<TextView
+				android:id="@+id/label_id"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="12sp" />
+			<EditText
+				android:id="@+id/edit_id"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="12sp" />
+			<TextView
+				android:id="@+id/label_name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="12sp" />
+			<EditText
+				android:id="@+id/edit_name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="12sp" />
+			<TextView
+				android:id="@+id/note"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="12sp" />
+			<TextView
+				android:id="@+id/btn_send"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="12sp" />
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

@@ -1,0 +1,117 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/avatar_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_messages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:choiceMode="none"
+        android:layout_weight="1" />
+
+    <!-- Reply bar -->
+    <LinearLayout
+        android:id="@+id/reply_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/btn_cancel_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp" />
+        <LinearLayout
+            android:id="@+id/reply_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/reply_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/reply_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Recording bar — مخفي حتى يبدأ التسجيل -->
+    <LinearLayout
+        android:id="@+id/recording_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="#1A000000"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <com.kimo.mogtama.WaveformView
+            android:id="@+id/waveform_view"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/recording_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#FF4444"
+            android:paddingStart="8dp"
+            android:text="0:00" />
+    </LinearLayout>
+
+    <!-- Input bar -->
+    <LinearLayout
+        android:id="@+id/input_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_send"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/icon_mic"
+            android:scaleType="center" />
+
+        <EditText
+            android:id="@+id/edit_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>
